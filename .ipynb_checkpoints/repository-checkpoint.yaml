@@ -1,5 +1,0 @@
-# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
-
-name: RV-C Home Assistant add-on repository
-url: 'https://github.com/iot49/HA-addons.git'
-maintainer: Bernhard Boser <boser@berkeley.edu>
