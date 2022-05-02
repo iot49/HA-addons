@@ -1,0 +1,22 @@
+name: "RV-C"
+description: >-
+  "RV Can Bus interface"
+version: "1.0.4"
+slug: "rv_c"
+arch:
+  - aarch64
+startup: application
+ports:
+  8000/tcp: 8000
+options:
+  beer: true
+  wine: true
+  liquor: false
+  name: "world"
+  year: 2017
+schema:
+  beer: bool
+  wine: bool
+  liquor: bool
+  name: str
+  year: int
