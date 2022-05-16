@@ -3,7 +3,8 @@ FROM $BUILD_FROM
 
 RUN apk add --no-cache python3
 
-COPY run.sh /
-RUN chmod a+x /run.sh
+RUN pip install pynmea2
 
-CMD [ "/run.sh" ]
+COPY __main__.py
+
+CMD [ "python3", "__main__.py" ]
