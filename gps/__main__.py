@@ -32,4 +32,5 @@ def read_gps(port, baud):
 
 
 enumerate_usb()
+print("connect to GPS", PORT)
 read_gps(PORT, BAUD)
