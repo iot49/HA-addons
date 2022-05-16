@@ -16,6 +16,8 @@ options:
   usb: true
   uart: true
   # how access usb without this?
+  devices:
+    - "/dev/USB0"
   full_access: true
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)
