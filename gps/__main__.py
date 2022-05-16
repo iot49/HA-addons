@@ -14,9 +14,9 @@ def enumerate_usb():
         print(f"{port.manufacturer} {port.product} {port.serial_number}")
 
 
-def read_gps(PORT, BAUD):
+def read_gps(port, baud):
     # read gps output and forward to home assistant
-    with Serial(PORT, BAUD) as dev:
+    with Serial(port, baud) as dev:
         while True:
             line = dev.readline().decode()
             # print(line)
@@ -31,6 +31,7 @@ def read_gps(PORT, BAUD):
                 # print(" ERR")
 
 
+print("starting __main__.py")
 
 enumerate_usb()
-read_gps()
+read_gps(PORT, BAUD)
