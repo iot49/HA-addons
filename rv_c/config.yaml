@@ -2,7 +2,7 @@
 name: "RV-C"
 version: "1.0.7"
 description: RV-C Interface
-url: https://github.com/iot49/HA-addons
+url: https://github.com/iot49/HA-addons/rv_c
 slug: "rv_c"
 arch:
   - aarch64
@@ -16,4 +16,3 @@ options:
   log_level: info
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)
-
