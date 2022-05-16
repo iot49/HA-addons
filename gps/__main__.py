@@ -10,7 +10,7 @@ BAUD = 4800
 def enumerate_usb():
     # Enumerate available USB deives
     for port in serial.tools.list_ports.comports():
-        print(f"{port.vid:04x}:{port.pid:04x} {port.device:20} ", end="")
+        print(f"FOUND DEVICE {port.vid:04x}:{port.pid:04x} {port.device:20} ", end="")
         print(f"{port.manufacturer} {port.product} {port.serial_number}")
 
 
@@ -30,8 +30,6 @@ def read_gps(port, baud):
                 pass
                 # print(" ERR")
 
-
-print("starting __main__.py")
 
 enumerate_usb()
 read_gps(PORT, BAUD)
