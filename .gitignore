@@ -1,0 +1,17 @@
+# .gitignore for custom addons
+
+# Default: ignore everything but descend into directories
+*
+!*/
+
+# Whitelist
+!*.yaml
+!*.md
+!*.sh
+!*.py
+!*.js*
+!.gitignore
+!Dockerfile
+
+# Ignore
+.ipynb_checkpoints/
