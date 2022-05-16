@@ -1,0 +1,17 @@
+---
+name: "gps"
+version: "1.0.0"
+description: Serial GPS receiver
+url: https://github.com/iot49/HA-addons
+slug: "gps"
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+options:
+  log_level: info
+schema:
+  log_level: list(trace|debug|info|notice|warning|error|fatal)
+
