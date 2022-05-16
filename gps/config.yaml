@@ -1,6 +1,6 @@
 ---
 name: "gps"
-version: "1.0.2"
+version: "1.0.3"
 description: Serial GPS receiver
 url: https://github.com/iot49/HA-addons
 slug: "gps"
