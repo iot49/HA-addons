@@ -1,6 +1,6 @@
 ---
 name: "gps"
-version: "1.0.10"
+version: "1.0.11"
 description: Serial GPS receiver
 url: https://github.com/iot49/HA-addons/gps
 slug: "gps"
@@ -17,8 +17,8 @@ options:
   uart: true
   # how access usb without this?
   devices:
-    - "/dev/USB0"
-  full_access: true
+    - /dev/ttyUSB0:/dev/ttyUSB0:rwm
+  # full_access: true
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)
 init: false
