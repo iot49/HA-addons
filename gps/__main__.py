@@ -18,10 +18,10 @@ def read_gps(port, baud):
     # read gps output and forward to home assistant
     print("open ...")
     with Serial(port, baud) as dev:
-        print(f"openeed {dev}")
+        print(f"opened {dev}")
         while True:
             line = dev.readline().decode()
-            # print(line)
+            print("LINE:", line)
             try:
                 msg = pynmea2.parse(line)
                 if False:
