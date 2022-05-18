@@ -1,6 +1,6 @@
 ---
 name: "gps"
-version: "1.0.12"
+version: "1.0.13"
 description: Serial GPS receiver
 url: https://github.com/iot49/HA-addons/gps
 slug: "gps"
@@ -16,13 +16,6 @@ schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)
 init: false
 uart: true
-hassio_api: true
-hassio_role: manager
+# hassio_api: true
+# hassio_role: manager
 homeassistant_api: true
-map:
-  - config:rw
-  - ssl:rw
-  - addons:rw
-  - media:rw
-  - share:rw
-  - backup:rw
