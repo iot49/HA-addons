@@ -16,22 +16,25 @@ def enumerate_usb():
 
 def read_gps(port, baud):
     # read gps output and forward to home assistant
-    # with Serial(port, baud) as dev:
+    print("open ...")
     with Serial(port, baud) as dev:
+        print(f"openeed {dev}")
         while True:
             line = dev.readline().decode()
             # print(line)
             try:
                 msg = pynmea2.parse(line)
-                print(f"{msg.num_sats}/{msg.gps_qual}", end="") 
-                print(f" {msg.timestamp}", end="")
-                print(f" {msg.latitude:7.3f}{msg.lat_dir}/{msg.longitude:8.3f}{msg.lon_dir}", end="")
-                print(f" {msg.altitude:.0f}m")
-            except (AttributeError, pynmea2.ParseError):
+                if False:
+                    print(f"{msg.num_sats}/{msg.gps_qual}", end="") 
+                    print(f" {msg.timestamp}", end="")
+                    print(f" {msg.latitude:7.3f}{msg.lat_dir}/{msg.longitude:8.3f}{msg.lon_dir}", end="")
+                    print(f" {msg.altitude:.0f}m")
+            except (TypeError, AttributeError, pynmea2.ParseError):
                 pass
-                # print(" ERR")
+                print(" ERR")
 
 
+print("enumerate ...")
 enumerate_usb()
 print("connect to GPS", PORT)
 read_gps(PORT, BAUD)
