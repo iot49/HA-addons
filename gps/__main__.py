@@ -16,6 +16,7 @@ def enumerate_usb():
 
 def read_gps(port, baud):
     # read gps output and forward to home assistant
+    # with Serial(port, baud) as dev:
     with Serial(port, baud) as dev:
         while True:
             line = dev.readline().decode()
